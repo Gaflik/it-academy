@@ -7,3 +7,5 @@ function sayHi() {
 console.log(sayHi())
 
 const fs = require('fs-extra');
+
+fs.mkdirpSync('first-dir')
