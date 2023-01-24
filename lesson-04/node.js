@@ -17,6 +17,9 @@ const fs = require('fs-extra');
 //const dest = "second-dir/1file.txt";
 //fs.moveSync(src, dest)
 
-const src = "second-dir/1file.txt";
-const dest = "third-dir/1file.txt";
-fs.copySync(src, dest)
+//const src = "second-dir/1file.txt";
+//const dest = "third-dir/1file.txt";
+//fs.copySync(src, dest)
+
+const file = 'third-dir/1file.txt'
+fs.removeSync(file)
