@@ -8,7 +8,11 @@ console.log(global);
 
 const fs = require('fs-extra');
 
-//fs.mkdirpSync('first-dir')
+//fs.mkdirpSync('second-dir')
 
-const file = 'first-dir/1file.txt'
-fs.ensureFileSync(file)
+//const file = 'first-dir/1file.txt'
+//fs.ensureFileSync(file)
+
+const src = "first-dir/1file.txt";
+const dest = "second-dir/1file.txt";
+fs.moveSync(src, dest)
