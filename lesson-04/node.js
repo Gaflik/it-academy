@@ -1,27 +1,28 @@
-console.log(global);
-
-//function sayHi() {
-//    return 10+30;
-//}
-
-//console.log(sayHi())
-
 const fs = require('fs-extra');
 
-//fs.mkdirpSync('third-dir')
+fs.mkdirpSync('first-dir');
 
-//const file = 'first-dir/1file.txt'
-//fs.ensureFileSync(file)
+const file1 = 'first-dir/1file.txt';
+fs.ensureFileSync(file1);
 
-//const src = "first-dir/1file.txt";
-//const dest = "second-dir/1file.txt";
-//fs.moveSync(src, dest)
+fs.mkdirpSync('second-dir');
 
-//const src = "second-dir/1file.txt";
-//const dest = "third-dir/1file.txt";
-//fs.copySync(src, dest)
+const src1 = "first-dir/1file.txt";
+const dest1 = "second-dir/1file.txt";
+fs.moveSync(src1, dest1);
 
-//const file = 'third-dir/1file.txt'
-//fs.removeSync(file)
+fs.mkdirpSync('third-dir');
 
-fs.removeSync('third-dir')
+const src2 = "second-dir/1file.txt";
+const dest2 = "third-dir/1file.txt";
+fs.copySync(src2, dest2);
+
+const file2 = 'second-dir/1file.txt';
+fs.removeSync(file2);
+
+const file3 = 'third-dir/1file.txt';
+fs.removeSync(file3);
+
+fs.removeSync('first-dir');
+fs.removeSync('second-dir');
+fs.removeSync('third-dir');
