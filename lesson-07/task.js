@@ -48,5 +48,46 @@ console.log(fridaysOf13())
 // изначальному числу. Пример: разбить 15 на 3 части (сумма четырех чисел будет равна 15) (4,6,5)
 // а. числа изначальное число целое, числа разбивки - целые (4,6,5)
 
+let num = 45;
+let parts = 5;
+let numArr = [];
+
+for (let i = 1; i <= parts; i++) {      
+    if (i === parts) {
+        numArr.push(num);
+        break;
+    }
+
+    let partOfNum = Math.round(Math.random() * num);
+    numArr.push(partOfNum);
+    num -= partOfNum;
+}
+console.log(numArr)
+function sumOfnumParts() {
+    return numArr.reduce((accumulator,currentValue) => accumulator + currentValue)
+}
+console.log(sumOfnumParts())
+
+
 // б. числа разбивки дробные с 2 знаками после запятой (4.55, 5.20, 5.25)
-// макс 10
+
+let num2 = 35;
+let parts2 = 6;
+let numArr2 = [];
+
+for (let i = 1; i <= parts2; i++) {      
+    if (i === 6) {
+        numArr2.push(Number(num2.toFixed(2)));
+        break;
+    }
+
+    let partOfNum2 = Number((Math.random() * num2).toFixed(2));
+    numArr2.push(partOfNum2);
+    num2 -= partOfNum2;
+}
+console.log(numArr2)
+function sumOfnumParts2() {
+    return numArr2.reduce((accumulator,currentValue) => accumulator + currentValue)
+}
+const sumOfnumParts2round = Math.round(sumOfnumParts2());
+console.log(sumOfnumParts2round)
