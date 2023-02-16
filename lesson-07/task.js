@@ -1,20 +1,20 @@
 // Эмулировать игру в кубики, 2 человека по очереди бросают кубик, каждый в итоге по 3 раза. У кого сумма трех бросков будет наибольшей - тот выиграл. 
 // Если суммы равны то ничья
 
-function rollDice() {
-    return Math.floor(Math.random() * 6) + 1;
+function rollDice(min,max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
 let summ1 = 0;
 let summ2 = 0;
 
 for (let i = 0; i < 3; i++) {
-    player1 = rollDice();
+    player1 = rollDice(1,6);
     summ1 += player1;
 }
 
 for (let k = 0; k < 3; k++) {
-        player2 = rollDice();
+        player2 = rollDice(1,6);
         summ2 += player2;
 } 
 
