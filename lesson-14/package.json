@@ -1,0 +1,22 @@
+{
+  "name": "lesson-14",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint --debug ./test/task14.js --fix",
+    "lint:write": "eslint --write ./test/task14.js --fix",
+    "test": "jest"
+  },
+  "author": "Gala",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.37.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.5"
+  },
+  "dependencies": {
+    "jest": "^29.5.0",
+    "jest-html-reporter": "^3.7.1"
+  }
+}
